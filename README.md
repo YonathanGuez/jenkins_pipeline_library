@@ -51,6 +51,10 @@ stage('Demo') {
 
 }
 ```
+The 'hello' will call the function call into : vars/hello.groovy
+The result will print at the end : Hello, yo.
+
+
 
 We will run the Job and see if the job can automaticly download my githut link 
 and run my global function 
