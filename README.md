@@ -83,7 +83,7 @@ stage('Demo') {
 ```
 the result will print : bar
 
-### call Resources: 
+### Call Resources: 
 ```
 @Library('test_jenkins')_
 
