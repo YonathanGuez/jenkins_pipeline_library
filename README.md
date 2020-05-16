@@ -37,6 +37,19 @@ For test this we will build our pipeline into the job with pipeline script
   <img width="800" height="500" src="https://github.com/YonathanGuez/test_jenkins/blob/master/img/jenkins_pipeline_conf.png">
 </p>
 
+code Pipeline:
+```
+@Library('test_jenkins')_
+
+stage('Demo') {
+
+  echo 'Hello World'
+
+  hello 'yo'
+
+}
+```
+
 We will run the Job and see if the job can automaticly download my githut link 
 and run my global function 
 <p align="center">
