@@ -1,8 +1,21 @@
 # How to use jenkins
 
-Learn Jenkins Basic
+Learn Jenkins Basic: Shared Library repository 
+```
+(root)
++- src                     # Groovy source files
+|   +- test
+|       +- first
+|           +- GlobalVars.groovy  # for test.first.Bar class
++- vars
+|   +- hello.groovy          # for global 'hello' variable
++- resources               # resource files (external libraries only)
+|   +- org
+|       +- hello
+|           +- name.json    # static helper data for org.hello.name
+```
 
-## How to build Jenkins Pipeline with GitHub:
+## How to build Jenkins Pipeline library with GitHub:
 
 ### Get access token with GitHub:
 <p align="center">
@@ -21,6 +34,7 @@ The name is only for identify what kind of credentiel you use
 ### Set Github Pipeline :
 
 I change the name of my github link is not test_jenkins but jenkins_pipeline_setting:
+Manage Jenkins » Configure System » Global Pipeline Libraries as many libraries as necessary can be configured.
 
 <p align="center">
   <img width="800" height="500" src="https://github.com/YonathanGuez/test_jenkins/blob/master/img/jenkins_set_pipeline_source_code.png">
