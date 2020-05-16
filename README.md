@@ -1,6 +1,5 @@
-# How to use jenkins
+# Learn Jenkins Basic: Shared Library Repository 
 
-Learn Jenkins Basic: Shared Library repository 
 ```
 (root)
 +- src                     # Groovy source files
@@ -53,7 +52,7 @@ For test this we will build our pipeline into the job with pipeline script
   <img width="800" height="500" src="https://github.com/YonathanGuez/test_jenkins/blob/master/img/jenkins_pipeline_conf.png">
 </p>
 
-code Pipeline:
+Test echo and Call Variable:
 ```
 @Library('test_jenkins')_
 
@@ -68,12 +67,33 @@ stage('Demo') {
 The 'hello' will call the function call into : vars/hello.groovy
 The result will print at the end : Hello, yo.
 
-
-
 We will run the Job and see if the job can automaticly download my githut link 
 and run my global function 
 <p align="center">
   <img width="800" height="500" src="https://github.com/YonathanGuez/test_jenkins/blob/master/img/jenkins_test_build.png">
 </p>
 
+### Call Source file : GlobalVars
+```
+@Library('test_jenkins')_
 
+stage('Demo') {
+  echo test.first.GlobalVars.foo
+}
+```
+the result will print : bar
+
+### call Resources: 
+```
+@Library('test_jenkins')_
+
+stage('Demo') {
+  def data = libraryResource 'org/hello/name.json'
+  echo data
+}
+```
+the result will print : [{"name": "test"},{"name": "yo"}]
+
+
+For more documentation : 
+https://www.jenkins.io/doc/book/pipeline/shared-libraries/
