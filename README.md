@@ -94,6 +94,30 @@ stage('Demo') {
 ```
 the result will print : [{"name": "test"},{"name": "yo"}]
 
+### Sumup with the Script:
+```
+@Library('test_jenkins')_
 
+node{
+	stage('Test Hello Word Simple') {
+			echo 'Hello World'
+	}
+	stage('Test hello from variable vars') {
+			hello 'yo'
+	}
+	stage('Test GlobalVars from Source src ') {
+			echo test.first.GlobalVars.foo
+	}
+	stage('Test Print Resources name.json') {
+		  def data = libraryResource 'org/hello/name.json'
+		  echo data
+	}
+}
+
+```
+
+<p align="center">
+  <img width="800" height="500" src="https://github.com/YonathanGuez/test_jenkins/blob/master/img/test_script_var_src_resources.png">
+</p>
 For more documentation : 
 https://www.jenkins.io/doc/book/pipeline/shared-libraries/
