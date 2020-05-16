@@ -20,6 +20,8 @@ The name is only for identify what kind of credentiel you use
 
 ### Set Github Pipeline :
 
+I change the name of my github link is not test_jenkins but jenkins_pipeline_setting:
+
 <p align="center">
   <img width="800" height="500" src="https://github.com/YonathanGuez/test_jenkins/blob/master/img/jenkins_set_pipeline_source_code.png">
 </p>
