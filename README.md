@@ -100,17 +100,17 @@ the result will print : [{"name": "test"},{"name": "yo"}]
 
 node{
 	stage('Test Hello Word Simple') {
-			echo 'Hello World'
+		echo 'Hello World'
 	}
 	stage('Test hello from variable vars') {
-			hello 'yo'
+		hello 'yo'
 	}
 	stage('Test GlobalVars from Source src ') {
-			echo test.first.GlobalVars.foo
+		echo test.first.GlobalVars.foo
 	}
 	stage('Test Print Resources name.json') {
-		  def data = libraryResource 'org/hello/name.json'
-		  echo data
+		def data = libraryResource 'org/hello/name.json'
+		echo data
 	}
 }
 
