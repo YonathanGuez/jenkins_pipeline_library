@@ -33,7 +33,7 @@ The name is only for identify what kind of credentiel you use
 
 ### Set Github Pipeline :
 
-I change the name of my github link is not test_jenkins but jenkins_pipeline_setting:
+I change the name of my github link is not test_jenkins but jenkins_pipeline_library:
 Manage Jenkins » Configure System » Global Pipeline Libraries as many libraries as necessary can be configured.
 
 <p align="center">
@@ -154,3 +154,4 @@ pipeline {
     }
 }
 ```
+[Example Jenkins Declarative](https://github.com/YonathanGuez/jenkins_declarative)
