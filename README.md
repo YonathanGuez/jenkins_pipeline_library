@@ -154,4 +154,11 @@ pipeline {
     }
 }
 ```
-[Example Jenkins Declarative](https://github.com/YonathanGuez/jenkins_declarative)
+## How to Use Declarative in Jenkins:
+
+[Example Jenkins Declarative:](https://github.com/YonathanGuez/jenkins_declarative)
+
+Link Github with example in link with this library:
+ - Basic Pipeline
+ - Use Parameters
+ - Use the function gitCheckout with Parameters
