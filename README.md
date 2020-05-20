@@ -8,6 +8,7 @@
 |           +- GlobalVars.groovy  # for test.first.Bar class
 +- vars
 |   +- hello.groovy          # for global 'hello' variable
+    +- gitCheckout.groovy    # globa checkout git 
 +- resources               # resource files (external libraries only)
 |   +- org
 |       +- hello
@@ -121,3 +122,35 @@ node{
 </p>
 For more documentation : 
 https://www.jenkins.io/doc/book/pipeline/shared-libraries/
+
+## Create Git Checkout in Jenkins Pipeline library :
+
+You will use the vars/gitCheckout.groovy :
+```
+#!/usr/bin/env groovy
+def call(Map stageParams) {
+    checkout([
+            $class: 'GitSCM',
+            branches: [[name:  stageParams.branch ]],
+            userRemoteConfigs: [[ url: stageParams.url ]]
+    ])
+}
+```
+You need to git branch and Url of github for use this function
+This is an example in jenkins Declarative:
+```
+@Library('test_jenkins@master') _
+pipeline {
+    agent any
+    stages {
+        stage('Git Checkout') {
+            steps {
+                gitCheckout(
+                        branch: "master",
+                        url: "https://github.com/NAME_USER/NAME_REPO.git"
+                )
+            }
+        }
+    }
+}
+```
