@@ -162,3 +162,4 @@ Link Github with example in link with this library:
  - Basic Pipeline
  - Use Parameters
  - Use the function gitCheckout with Parameters
+ - Delete workspace at the end 
