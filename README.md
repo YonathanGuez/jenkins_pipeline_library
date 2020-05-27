@@ -159,7 +159,8 @@ pipeline {
 [Example Jenkins Declarative:](https://github.com/YonathanGuez/jenkins_declarative)
 
 Link Github with example in link with this library:
- - Basic Pipeline
- - Use Parameters
- - Use the function gitCheckout with Parameters
- - Delete workspace at the begin or at the end
+ - [Basic Pipeline](https://github.com/YonathanGuez/jenkins_declarative/tree/master)
+ - [Use Parameters](https://github.com/YonathanGuez/jenkins_declarative/tree/parameter_jenkins)
+ - [Use the function gitCheckout with Parameters](https://github.com/YonathanGuez/jenkins_declarative/tree/parameter_jenkins)
+ - [Delete workspace at the begin or at the end](https://github.com/YonathanGuez/jenkins_declarative/tree/parameter_jenkins)
+ - [Upload File with input function](https://github.com/YonathanGuez/jenkins_declarative/tree/upload_file)
